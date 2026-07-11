@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Page</title>
+</head>
+<body>
+    <h1>Welcome to Dashboard</h1>
+
+    <div>
+        <h1>your account no is: {{acc_no}}</h1>
+        <h2>your name is: {{data.name}}</h2>
+        <h2>initial balance is: {{data.balance}}</h2>
+    </div>
+
+    <br><hr>
+
+    <form action="/deposit/{{acc_no}}" method="post">
+        <input type="number" name="amount" id="" placeholder="Enter amount for depo.." required>
+        <input type="submit" value="Deposit">
+    </form>
+
+    <br><hr>
+
+    <form action="/withdraw/{{acc_no}}" method="post">
+        <input type="number" name="amount" id="" placeholder="Enter amount for withdraw.." required>
+        <input type="submit" value="withdraw">
+    </form>
+ <br> <br>
+    <a href="/delete/{{acc_no}}">Delete Account</a>
+</body>
+</html>
